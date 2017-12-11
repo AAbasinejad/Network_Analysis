@@ -1,0 +1,8 @@
+invind = {}
+for item in datasetred:
+    for a in item['authors']:
+        aid = a['author_id']
+        if aid in invind.keys():
+            invind[aid] += [item['id_publication_int']]
+        else:
+            invind[aid] = [item['id_publication_int']]
