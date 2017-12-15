@@ -4,25 +4,7 @@ import html
 import itertools
 import networkx as nx
 import matplotlib.pyplot as plt
-from collections import defaultdict
-from heapq import *
 
-#import matplotlib.pyplot as plt
-#import plotly.plotly as py
-#from plotly.graph_objs import *
-
-# Function to clean the name
-def clean_name(name):
-    name=html.unescape(name)
-    return re.sub(r'[0-9]+','',name)
-
-# Function to calculate jaccard similarity
-def jaccard_similarity(x,y):
-    intersection_cardinality = len(set.intersection(*[set(x), set(y)]))
-    union_cardinality = len(set.union(*[set(x), set(y)]))
-    return (intersection_cardinality/float(union_cardinality))
-
-#Function to create a graph's nodes without edges
 def create_graph(inf_data):
     graph=nx.Graph()
     diz_aut={}
