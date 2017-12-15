@@ -4,7 +4,6 @@ import html
 import itertools
 import networkx as nx
 
-
 def create_graph(inf_data):
     graph=nx.Graph()
     diz_aut={}
