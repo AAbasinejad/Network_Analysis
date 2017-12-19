@@ -1,2 +1,2 @@
-# Computer Scientists Network
-Carry out some information from Computer Scientists Network by applying the graph methods.
+# CS-Network
+carry out some information from Computer Scientists network by applying the graph methods
