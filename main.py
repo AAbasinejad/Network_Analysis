@@ -1,6 +1,6 @@
 import json
 import networkx as nx
-import CreationGraph as cg
+import Graph
 import Hopdistance as hd
 #import plot
 import Arisnumber as an
@@ -10,8 +10,8 @@ with open('reduced_dblp.json') as json_data:
     data = json.load(json_data)
     
 # Create a weighted graph
-G= cg.create_graph(data)
-cg.add_edges(data,G)
+G= Graph.create_graph(data)
+Graph.add_edges(data,G)
 
 # Subgraph of authors who published at a specific conference
 conf=int(input('Insert a conference id:\n'))
