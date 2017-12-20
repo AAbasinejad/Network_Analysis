@@ -21,7 +21,7 @@ This file is the main corpus of the project, and it is to initialize and call an
 
 * [*__`Graph.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Graph.py):
 
-By processing JSON file, it creates a graph, G, whose nodes are the authors and edges between Two nodes is a connection if they have at least one publication in common. Each edge is weighted in the following way:
+By processing JSON file, it creates a graph, G, whose nodes are the authors and one edge between two nodes is a connection if they have at least one publication in common. Each edge is weighted in the following way:
 <d1>
 <p align="center">
   <img src="https://latex.codecogs.com/gif.latex?w(a_1,a_2)&space;=&space;1&space;-&space;J(p_1,&space;p_2)" title="Weight Formula" width="200"/>
@@ -30,16 +30,9 @@ By processing JSON file, it creates a graph, G, whose nodes are the authors and 
 
 > where a1, a2 are authors, p1 and p2 are the set of publication of the two authors and, J(p1 , p2) represents the jaccard similarity between these two sets of publications.
 ```python
-def create_graph(inf_data): #which is to create a graph's nodes without edges, (this function must be called with a loaded #json dataset file as a argument)
-def add_edges(inf_data,graph): #which is used to create weighted graph's edges, (this must be called with a loaded json 
+def create_graph(inf_data): #this function is to create a graph's nodes without edges, (this function must be called with a #loaded json dataset file as a argument)
+def add_edges(inf_data,graph): #this finction is used to create weighted graph's edges, (this must be called with a loaded json 
 #dataset and the results nodes of previous function.
-```
-in following way:
-``` python
-with open('reduced_dblp.json') as json_data
-    data = json.load(json_data)
-G = Graph.create_graph(data)
-Graph.add_edges(data,G)
 ```
 
 * [*__`Arisnumber.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Arisnumber.py): 
