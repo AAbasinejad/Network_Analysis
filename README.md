@@ -43,14 +43,18 @@ def __init__(self, graph): # for Initialization
 def create_dict_connection(self): # Function to make a dictionary that nodes appears as keys and tuples of connected nodes to 
 #each key as values in this form: ("connected node", "weight")
 def path_list(path,lst_path): # this function is to made a list which contain a path between each two connected node.
-def dijkstrapath(self,start): # to calculate the shortes distance between an author and the others nodes, using heap.
+def dijkstrapath(self,start): #this function is to calculate the shortest distance between an author and the others nodes, using heap.
 def GroupNumber(self,set_id_author): # Dictionary with all shortest paths for the nodes of the input set.
 ```
 
 * [*__`GenericFunctions.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py):
 
-File contains just three generic functions, `clean_name` to cleaning the names, `jaccard_similarity` to calculate jaccard_similarity between two lists, `Id_name` to convert the author's id in corresponding author's name.
-
+This file contains just three generic functions which are used in previous and following modules and classes: 
+```python
+def clean_name(name): #to clean the names, 
+def jaccard_similarity(lst1,lst2): #to calculate jaccard_similarity between two lists,
+def Id_name(graph,node_auth): #to convert the authors' ids into their corresponding names.
+```
 * [*__`Hopdistance.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): 
 
 Contain a class named `Hop_Dist` This class finds all nodes that have hop distance at most equal to an integer d, starting from an input node, which both given by the user. It also contain several functions:
