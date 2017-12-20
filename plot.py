@@ -7,7 +7,7 @@ import GenericFunctions as gf
 
 def create_graph_by_conf(G_def, conf):
     
-    # nodi che hanno più di 4 collegamenti più gradi
+    # Nodes that have more than 4 links
     node_2_conn=[node for node in G_def.nodes() if len(G_def[node]) <=2 ] 
     node_2_6_conn=[node for node in G_def.nodes() if len(G_def[node])>2 and len(G_def[node])<=6  ]
     node_6_10_conn=[node for node in G_def.nodes() if len(G_def[node])>6 and len(G_def[node])<=10 ]
@@ -97,7 +97,7 @@ def create_graph_by_auth(node,G_def):
         else:
             node_colours.append('dodgerblue')
                 
-    # nodi che hanno più di 4 collegamenti più gradi
+    # Nodes that have more than 4 links
     node_2_conn=[node for node in G_def.nodes() if len(G_def[node]) <=2 ] 
     node_2_6_conn=[node for node in G_def.nodes() if len(G_def[node])>2 and len(G_def[node])<=6  ]
     node_6_10_conn=[node for node in G_def.nodes() if len(G_def[node])>6 and len(G_def[node])<=10 ]
