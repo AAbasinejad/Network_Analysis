@@ -9,9 +9,9 @@ In root directory run:
 
 `python main.py <reduced_data> <exercise_number> <exercise_letter>`
 
-* First Argument can be *reduced* if you want to use the __reduced_dblp__ dataset or *full* if you want to use __full_dblp__.
-* Second Argument can be *1*, *2* or *3* (if you put *1* it just made graph)
-* Third Argument can be *a* or *b* (only if the sencond Argument is *2* and *3*)
+* __First Argument__: it can be *reduced* if you want to use the __reduced_dblp__ dataset or *full* if you want to use __full_dblp__.
+* __Second Argument__: it can be *1*(just to make graph), *2*(just to run second part of the task) or *3* (just to run Third part of the task)
+* __Third Argument__: it can be *a* or *b* (only if the sencond Argument is *2* and *3*, for each part of them)
 
 __Modules__:
 
