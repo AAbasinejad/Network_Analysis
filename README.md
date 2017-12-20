@@ -8,6 +8,10 @@ __Data__: In this project we've used the [DBLP](http://dblp.uni-trier.de/) datas
 
 __Modules__:
 
+[*__`main.py`__* ](https://github.com/AAbasinejad/CS-Network/blob/master/main.py): 
+
+This file is the main corpus of the project, and it is just to initialize and call another funtions. that will eplain in following.
+
 [*__`Graph.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Graph.py):
 
 By processing JSON file create a graph, G, whose nodes are the authors. Two nodes are connected if they have at least one publication in common. Each edge is weighted in the following way:
@@ -30,13 +34,10 @@ with open('reduced_dblp.json') as json_data
 G = Graph.create_graph(data)
 Graph.add_edges(data,G)
 ```
-[*__`main.py`__* ](https://github.com/AAbasinejad/CS-Network/blob/master/main.py): 
-
-file is just to initialize and call another funtions.
 
 [*__`Arisnumber.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Arisnumber.py): 
 
-file contain a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author. this class contain several function:
+This file contain a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author. this class contain several function:
 ```python
 def __init__(self, graph): # for Initialization
 def create_dict_connection(self): # Function to make a dictionary that nodes appears as keys and tuples of connected nodes to 
@@ -48,11 +49,11 @@ def GroupNumber(self,set_id_author): # Dictionary with all shortest paths for th
 
 [*__`GenericFunctions.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py):
 
-file contains just three generic functions, `clean_name` to cleaning the names, `jaccard_similarity` to calculate jaccard_similarity between two lists, `Id_name` to convert the author's id in corresponding author's name.
+File contains just three generic functions, `clean_name` to cleaning the names, `jaccard_similarity` to calculate jaccard_similarity between two lists, `Id_name` to convert the author's id in corresponding author's name.
 
 [*__`Hopdistance.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): 
 
-contain a class named `Hop_Dist` This class finds all nodes that have hop distance at most equal to an integer d, starting from an input node, which both given by the user. It also contain several functions:
+Contain a class named `Hop_Dist` This class finds all nodes that have hop distance at most equal to an integer d, starting from an input node, which both given by the user. It also contain several functions:
 ```python
 def connect(self,lst_node,step): # Recursive function to calculate the hop distance, when the number of step is more than 1
 def hop_distance(self,step, node): # Function to calculate the hop distance of a specific input author for the 3 main situations
@@ -60,5 +61,5 @@ def hop_distance(self,step, node): # Function to calculate the hop distance of a
 
 [*__`plot.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): 
 
-contain several functions to Plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detaied Explaination about Plot will be added)
+Contain several functions to Plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detaied Explaination about Plot will be added)
 
