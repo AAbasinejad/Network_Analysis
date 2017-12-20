@@ -20,7 +20,7 @@ __Modules__:
 In __Graph__ module we have two function, `def create_graph(inf_data):` which is to create a graph's nodes without edges, (this function must be called with a loaded json dataset file as a argument), and `def add_edges(inf_data,graph):` which is used to create weighted graph's edges, (this must be called with a loaded json dataset and the results nodes of previous function, in following way:
 
 ``` python
-with open('reduced_dblp.json') as json_data:
+with open('reduced_dblp.json') as json_data
     data = json.load(json_data)
 G = Graph.create_graph(data)
 Graph.add_edges(data,G)
@@ -36,6 +36,12 @@ def path_list(path,lst_path): # this function is to made a list which contain a 
 def dijkstrapath(self,start): # to calculate the shortes distance between an author and the others nodes, using heap.
 def GroupNumber(self,set_id_author): # Dictionary with all shrtest paths for the nodes of the input set.
 ```
+
+[GenericFunctions](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py): *__GenericFunctions__* file contains just three generic functions, `clean_name` to cleaning the names, `jaccard_similarity` to calculate jaccard_similarity between two lists, `Id_name` to convert the author's id in corresponding author's name.
+
+[Hopdistance](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): It contain a class named `Hop_Dist` This class finds all nodes that have hop distance at most equal to an integer d, starting from an input node, which both given by the user.
+
+[Plot](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): this file contain 
 
 
 
