@@ -1,5 +1,5 @@
 # CS-Network
-Repository for Homework __4__ of Algorithmic Methods for Data Mining - *__Group 0__*.
+Repository for Homework __4__ of Algorithmic Methods for Data Mining - *__Group 1__*.
 
 __Introduction__: Carry out some information from Computer Scientists network by applying the [Graph methods](https://networkx.github.io/).
 
@@ -15,6 +15,17 @@ __Modules__:
 </d1>
 
 > where a1, a2 are authors, p1 and p2 are the set of publication of the two authors and, J(p1 , p2) represents the jaccard similarity between these two sets of publications.
+
+In __Graph__ module we have two function, `def create_graph(inf_data):` which is to create a graph's nodes without edges, (this function must be called with a loaded json dataset file as a argument), and `def add_edges(inf_data,graph):` which is used to create weighted graph's edges, (this must be called with a loaded json dataset and the results nodes of previous function, in following way:
+
+``` python
+with open('reduced_dblp.json') as json_data:
+    data = json.load(json_data)
+G = Graph.create_graph(data)
+Graph.add_edges(data,G)
+```
+
+
 
 
 
