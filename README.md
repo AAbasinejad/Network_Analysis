@@ -51,13 +51,13 @@ def GroupNumber(self,set_id_author): # Dictionary with all shortest paths for th
 
 This file contains just three generic functions which are used in previous and following modules and classes: 
 ```python
-def clean_name(name): #to clean the names, 
-def jaccard_similarity(lst1,lst2): #to calculate jaccard_similarity between two lists,
-def Id_name(graph,node_auth): #to convert the authors' ids into their corresponding names.
+def clean_name(name): #this function is to clean the names 
+def jaccard_similarity(lst1,lst2): #this function is to calculate jaccard_similarity between two lists
+def Id_name(graph,node_auth): #this function is to convert the authors' ids into their corresponding names
 ```
 * [*__`Hopdistance.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): 
 
-Contain a class named `Hop_Dist` This class finds all nodes that have hop distance at most equal to an integer d, starting from an input node, which both given by the user. It also contain several functions:
+This file contains a class named `Hop_Dist`, which finds all nodes that have hop distance at most equal to an integer d, starting from an input node, given both of them by the user. It also contains several functions:
 ```python
 def connect(self,lst_node,step): # Recursive function to calculate the hop distance, when the number of step is more than 1
 def hop_distance(self,step, node): # Function to calculate the hop distance of a specific input author for the 3 main situations
@@ -65,5 +65,5 @@ def hop_distance(self,step, node): # Function to calculate the hop distance of a
 
 * [*__`plot.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): 
 
-Contain several functions to Plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detaied Explaination about Plot will be added)
+this file contains several functions to plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detailed Explaination about Plot will be added)
 
