@@ -31,13 +31,13 @@ By processing JSON file, it creates a graph, G, whose nodes are the authors and 
 > where a1, a2 are authors, p1 and p2 are the set of publication of the two authors and, J(p1 , p2) represents the jaccard similarity between these two sets of publications.
 ```python
 def create_graph(inf_data): #this function is to create a graph's nodes without edges, (this function must be called with a #loaded json dataset file as a argument)
-def add_edges(inf_data,graph): #this finction is used to create weighted graph's edges, (this must be called with a loaded json 
+def add_edges(inf_data,graph): #this function is used to create weighted graph's edges, (this must be called with a loaded json 
 #dataset and the results nodes of previous function.
 ```
 
 * [*__`Arisnumber.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Arisnumber.py): 
 
-This file contain a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author. this class contain several function:
+This file contains a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author. This class contains several functions:
 ```python
 def __init__(self, graph): # for Initialization
 def create_dict_connection(self): # Function to make a dictionary that nodes appears as keys and tuples of connected nodes to 
