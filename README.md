@@ -34,7 +34,7 @@ def create_dict_connection(self): # Function to make a dictionary that nodes app
 #each key as values in this form: ("connected node", "weight")
 def path_list(path,lst_path): # this function is to made a list which contain a path between each two connected node.
 def dijkstrapath(self,start): # to calculate the shortes distance between an author and the others nodes, using heap.
-def GroupNumber(self,set_id_author): # Dictionary with all shrtest paths for the nodes of the input set.
+def GroupNumber(self,set_id_author): # Dictionary with all shortest paths for the nodes of the input set.
 ```
 
 [GenericFunctions](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py): *__GenericFunctions.py__* file contains just three generic functions, `clean_name` to cleaning the names, `jaccard_similarity` to calculate jaccard_similarity between two lists, `Id_name` to convert the author's id in corresponding author's name.
