@@ -46,7 +46,7 @@ def hop_distance(self,step, node): # Function to calculate the hop distance of a
 ```
 
 
-[Plot](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): *__plot.py__* contain several functions to Plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detaied Explaination will be added)
+[Plot](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): *__plot.py__* contain several functions to Plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detaied Explaination about Plot will be added)
 
 
 
