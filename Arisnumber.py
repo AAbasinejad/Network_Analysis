@@ -8,7 +8,8 @@ class Shortest_Path():
     def __init__(self, graph):  
         self.graph=graph
         
-# Function to have a dictionary with every links between each nodes
+# Function to have a dictionary wich there is nodes as key and tuples of connected nodes to each key
+# in this form: ("connected node", "weight")
     def create_dict_connection(self):
         edges=nx.to_edgelist(self.graph.to_directed())
         dic = defaultdict(list)
