@@ -37,11 +37,16 @@ def dijkstrapath(self,start): # to calculate the shortes distance between an aut
 def GroupNumber(self,set_id_author): # Dictionary with all shrtest paths for the nodes of the input set.
 ```
 
-[GenericFunctions](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py): *__GenericFunctions__* file contains just three generic functions, `clean_name` to cleaning the names, `jaccard_similarity` to calculate jaccard_similarity between two lists, `Id_name` to convert the author's id in corresponding author's name.
+[GenericFunctions](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py): *__GenericFunctions.py__* file contains just three generic functions, `clean_name` to cleaning the names, `jaccard_similarity` to calculate jaccard_similarity between two lists, `Id_name` to convert the author's id in corresponding author's name.
 
-[Hopdistance](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): It contain a class named `Hop_Dist` This class finds all nodes that have hop distance at most equal to an integer d, starting from an input node, which both given by the user.
+[Hopdistance](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): *__Hopdistance.py__* contain a class named `Hop_Dist` This class finds all nodes that have hop distance at most equal to an integer d, starting from an input node, which both given by the user. It also contain several functions:
+```python
+def connect(self,lst_node,step): # Recursive function to calculate the hop distance, when the number of step is more than 1
+def hop_distance(self,step, node): # Function to calculate the hop distance of a specific input author for the 3 main situations
+```
 
-[Plot](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): this file contain 
+
+[Plot](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): *__plot.py__* contain several functions to Plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detaied Explaination will be added)
 
 
 
