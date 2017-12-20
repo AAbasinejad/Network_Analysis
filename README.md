@@ -1,18 +1,24 @@
 # CS-Network
 Repository for Homework __4__ of Algorithmic Methods for Data Mining - *__Group 1__*.
 
-
 __Introduction__: Carry out some information from Computer Scientists network by applying the [Graph methods](https://networkx.github.io/).
 
-__Data__: In this project we've used the [DBLP](http://dblp.uni-trier.de/) dataset. during the project we worked on two json file, *__full_dblp__* json file, which needs to be parsed and contains the entire network, and  *__reduced_dblp__* json file for testing and debugging, which needs to be parsed and contains a portion of the network.
+__Data__: In this project we've used the [DBLP](http://dblp.uni-trier.de/) dataset. during the project we worked on two json file, [*__full_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/full_dblp.json.zip ) json file, which needs to be parsed and contains the entire network, and  [*__reduced_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/reduced_dblp.json.zip) json file for testing and debugging, which needs to be parsed and contains a portion of the network.
+
+In root directory run:
+
+`python main.py <reduced_data> <exercise_number> <exercise_letter>`
+
+* First Argument can be *reduced* if you want to use the __reduced_dblp__ dataset or *full* if you want to use __full_dblp__.
+* 
 
 __Modules__:
 
-[*__`main.py`__* ](https://github.com/AAbasinejad/CS-Network/blob/master/main.py): 
+* [*__`main.py`__* ](https://github.com/AAbasinejad/CS-Network/blob/master/main.py): 
 
-This file is the main corpus of the project, and it is just to initialize and call another funtions. that will eplain in following.
+This file is the main corpus of the project, and it is to initialize and call another functions, which will explain in following.
 
-[*__`Graph.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Graph.py):
+* [*__`Graph.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Graph.py):
 
 By processing JSON file create a graph, G, whose nodes are the authors. Two nodes are connected if they have at least one publication in common. Each edge is weighted in the following way:
 <d1>
@@ -35,7 +41,7 @@ G = Graph.create_graph(data)
 Graph.add_edges(data,G)
 ```
 
-[*__`Arisnumber.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Arisnumber.py): 
+* [*__`Arisnumber.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Arisnumber.py): 
 
 This file contain a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author. this class contain several function:
 ```python
@@ -47,11 +53,11 @@ def dijkstrapath(self,start): # to calculate the shortes distance between an aut
 def GroupNumber(self,set_id_author): # Dictionary with all shortest paths for the nodes of the input set.
 ```
 
-[*__`GenericFunctions.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py):
+* [*__`GenericFunctions.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py):
 
 File contains just three generic functions, `clean_name` to cleaning the names, `jaccard_similarity` to calculate jaccard_similarity between two lists, `Id_name` to convert the author's id in corresponding author's name.
 
-[*__`Hopdistance.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): 
+* [*__`Hopdistance.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): 
 
 Contain a class named `Hop_Dist` This class finds all nodes that have hop distance at most equal to an integer d, starting from an input node, which both given by the user. It also contain several functions:
 ```python
@@ -59,7 +65,7 @@ def connect(self,lst_node,step): # Recursive function to calculate the hop dista
 def hop_distance(self,step, node): # Function to calculate the hop distance of a specific input author for the 3 main situations
 ```
 
-[*__`plot.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): 
+* [*__`plot.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): 
 
 Contain several functions to Plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detaied Explaination about Plot will be added)
 
