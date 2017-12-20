@@ -27,7 +27,15 @@ Graph.add_edges(data,G)
 ```
 [main](https://github.com/AAbasinejad/CS-Network/blob/master/main.py): *__main.py__* file is just to initialize and call another funtions.
 
-[Arisnumber](https://github.com/AAbasinejad/CS-Network/blob/master/Arisnumber.py): *__Arisnumber.py
+[Arisnumber](https://github.com/AAbasinejad/CS-Network/blob/master/Arisnumber.py): *__Arisnumber.py__* file contain a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author. this class contain several function:
+```python
+def __init__(self, graph): # for Initialization
+def create_dict_connection(self): # Function to make a dictionary that nodes appears as keys and tuples of connected nodes to 
+#each key as values in this form: ("connected node", "weight")
+def path_list(path,lst_path): # this function is to made a list which contain a path between each two connected node.
+def dijkstrapath(self,start): # to calculate the shortes distance between an author and the others nodes, using heap.
+def GroupNumber(self,set_id_author): # Dictionary with all shrtest paths for the nodes of the input set.
+```
 
 
 
