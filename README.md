@@ -9,9 +9,9 @@ In root directory run:
 
 `python main.py <reduced_data> <exercise_number> <exercise_letter>`
 
-* __First Argument__: it can be *reduced* if you want to use the __reduced_dblp__ dataset or *full* if you want to use __full_dblp__.
-* __Second Argument__: it can be *1* (just to make graph), *2* (just to run second part of the task) or *3* (just to run Third part of the task)
-* __Third Argument__: it can be *a* or *b* (only if the second Argument is *2* and *3*, for each part of them)
+* __First Argument__: It can be *reduced* if you want to use the __reduced_dblp__ dataset or *full* if you want to use __full_dblp__.
+* __Second Argument__: It can be *1* (just to make graph), *2* (just to run second part of the task) or *3* (just to run Third part of the task)
+* __Third Argument__: It can be *a* or *b* (only if the second Argument is *2* and *3*, for each part of them)
 
 __Modules__:
 
@@ -21,7 +21,7 @@ This file is the main corpus of the project, and it is to initialize and call an
 
 * [*__`Graph.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Graph.py):
 
-By processing JSON file create a graph, G, whose nodes are the authors. Two nodes are connected if they have at least one publication in common. Each edge is weighted in the following way:
+By processing JSON file, it creates a graph, G, whose nodes are the authors and edges between Two nodes is a connection if they have at least one publication in common. Each edge is weighted in the following way:
 <d1>
 <p align="center">
   <img src="https://latex.codecogs.com/gif.latex?w(a_1,a_2)&space;=&space;1&space;-&space;J(p_1,&space;p_2)" title="Weight Formula" width="200"/>
