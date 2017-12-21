@@ -3,7 +3,7 @@ Repository for Homework __4__ of Algorithmic Methods for Data Mining - *__Group 
 
 __Introduction__: Carry out some information from Computer Scientists network by applying the [Graph methods](https://networkx.github.io/).
 
-__Data__: In this project we've used the [DBLP](http://dblp.uni-trier.de/) dataset. during the project we worked on two json file, [*__full_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/full_dblp.json.zip ) json file, which needs to be parsed and contains the entire network, and  [*__reduced_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/reduced_dblp.json.zip) json file for testing and debugging, which needs to be parsed and contains a portion of the network.
+__Data__: In this project we've used the [DBLP](http://dblp.uni-trier.de/) dataset. during the project we worked on two json file, [*__full_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/full_dblp.json.zip ) json file, which needs to be parsed and contains the entire network, and  [*__reduced_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/reduced_dblp.json.zip) json file for testing and debugging, which needs to be parsed and contains a portion of the network, also `Pyhton 3.x` was used in this project.
 
 In root directory run:
 
@@ -117,10 +117,12 @@ import GenericFunctions as gf
 Functions definition:
 
 ```python
-def create_graph_by_conf(G_def, conf):
+def create_graph_by_conf(G_def, conf): #
 def statistics_by_conf(G_sub, conf):
 def create_graph_by_auth(node,G_def):
 def create_plot_shorter_path(G,tup_node):
 ```
+
+
 
 
