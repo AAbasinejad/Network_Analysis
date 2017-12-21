@@ -3,15 +3,15 @@ Repository for Homework __4__ of Algorithmic Methods for Data Mining - *__Group 
 
 __Introduction__: Carry out some information from Computer Scientists network by applying the [Graph methods](https://networkx.github.io/).
 
-__Data__: In this project we've used the [DBLP](http://dblp.uni-trier.de/) dataset. during the project we worked on two json file, [*__full_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/full_dblp.json.zip ) json file, which needs to be parsed and contains the entire network, and  [*__reduced_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/reduced_dblp.json.zip) json file for testing and debugging, which needs to be parsed and contains a portion of the network, also `Pyhton 3.x` was used in this project.
+__Data__: In this project we've used the [DBLP](http://dblp.uni-trier.de/) dataset, and we worked on two json file: [*__full_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/full_dblp.json.zip ) json file, which needs to be parsed and contains the entire network, and  [*__reduced_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/reduced_dblp.json.zip) json file for testing and debugging, which needs to be parsed and contains a portion of the network, also `Pyhton 3.x` was used in this project.
 
 In root directory run:
 
-`python main.py <reduced_data> <exercise_number> <exercise_letter>`
+`python main.py <data> <exercise_number> <exercise_letter>`
 
-* __First Argument__: It can be *reduced* if you want to use the __reduced_dblp__ dataset or *full* if you want to use __full_dblp__.
-* __Second Argument__: It can be *1* (just to make graph), *2* (just to run second part of the task) or *3* (just to run Third part of the task)
-* __Third Argument__: It can be *a* or *b* (only if the second Argument is *2* and *3*, for each part of them)
+* __data__: It can be *reduce* if you want to use the __reduced_dblp__ dataset or *full* if you want to use __full_dblp__.
+* __exercise_number__: It can be *1* (just to make graph), *2* (just to run second part of the task) or *3* (just to run Third part of the task)
+* __exercise_letter__: It can be *a* or *b* (only if the second Argument is *2* and *3*, for each part of them)
 
 __Modules__:
 
