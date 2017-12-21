@@ -65,5 +65,24 @@ def hop_distance(self,step, node): # Function to calculate the hop distance of a
 
 * [*__`plot.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): 
 
-this file contains several functions to plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`. (Detailed Explaination about Plot will be added)
+this file contains several functions to plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`.
+
+this modules and libraries should be import:
+
+```python
+import networkx as nx
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+import numpy
+import Hopdistance as hd
+import GenericFunctions as gf
+```
+
+```python
+def create_graph_by_conf(G_def, conf):
+def statistics_by_conf(G_sub, conf):
+def create_graph_by_auth(node,G_def):
+def create_plot_shorter_path(G,tup_node):
+```
+
 
