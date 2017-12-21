@@ -8,8 +8,8 @@ class Shortest_Path():
     def __init__(self, graph):  
         self.graph=graph
         
-# Function to have a dictionary wich there is nodes as key and tuples of connected nodes to each key
-# in this form: ("connected node", "weight")
+# Function to make a dictionary that nodes appears as keys and tuples of connected nodes to 
+# each key as values in this form: ("connected node", "weight")
     def create_dict_connection(self):
         edges=nx.to_edgelist(self.graph.to_directed())
         dic = defaultdict(list)
@@ -17,15 +17,15 @@ class Shortest_Path():
             dic[id_1].append((id_2,weight['weight']))
         return dic
     
-# Function to obtain a good output of the shortest path   
+# Function to obtain a good output for the shortest path   
     def path_list(path,lst_path):
         if path==():
             return lst_path[::-1]
         lst_path.append(path[0])
         return Shortest_Path.path_list(path[1],lst_path)
     
-# Function to calculate the shortes distance between an author and the others nodes, using heap;
-# it returns a dictionary with the shortest path and the corresponding weight
+# Function to calculate the shortest distance between an author and the others nodes, using heap;
+# it returns a dictionary with the shortest path and the corresponding weight in a tuple as value
     def dijkstrapath(self,start):    
         weight_dic=self.create_dict_connection()
 # Initialize queue
@@ -34,7 +34,7 @@ class Shortest_Path():
         visited=set()
         dict_path={}
         while queue:
-# Take the element with the least weight from the queue
+# Take the element with the minimum weight from the queue
             weight,vertex1,path = heapq.heappop(queue)
             if vertex1 not in visited:
                 visited.add(vertex1)
