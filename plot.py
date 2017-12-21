@@ -7,7 +7,7 @@ import GenericFunctions as gf
 
 def create_graph_by_conf(G_def, conf):
     
-    # Nodes that have more than 4 links
+# Divide all nodes in 4 groups by the number of edges for each node
     node_2_conn=[node for node in G_def.nodes() if len(G_def[node]) <=2 ] 
     node_2_6_conn=[node for node in G_def.nodes() if len(G_def[node])>2 and len(G_def[node])<=6  ]
     node_6_10_conn=[node for node in G_def.nodes() if len(G_def[node])>6 and len(G_def[node])<=10 ]
@@ -25,14 +25,15 @@ def create_graph_by_conf(G_def, conf):
             node_size.append(100)
         else:
             node_size.append(200)
-            
+# Give a colour to more important nodes (which have a lot of connections)        
     node_colours=[]
     for node in G_def.nodes():
         if node in node_10_15_conn:
             node_colours.append('lightcoral')
         else:
             node_colours.append('dodgerblue')
-    
+# Plot subgraph
+    fig = plt.figure()
     nx.draw(G_def,pos=nx.spring_layout(G_def), 
             cmap=plt.get_cmap('jet'),
             node_color =node_colours,
@@ -40,10 +41,11 @@ def create_graph_by_conf(G_def, conf):
             width=0.5,
             style='dotted',
             alpha=0.9)
+    fig.suptitle('Graph of the conference: ' + str(conf), fontsize=14, fontweight='bold', color='firebrick')
+
     lightcoral_patch = mpatches.Patch(color='lightcoral', label='degree > 10')
     
     plt.legend(handles=[lightcoral_patch], loc=1)
-    plt.title('Graph of the conference: ' + str(conf))
     plt.savefig('create_graph_by_conf.png')
 
     plt.show()
@@ -52,16 +54,16 @@ def create_graph_by_conf(G_def, conf):
 
 
 def statistics_by_conf(G_sub, conf):
-    # Degree
+    # Degree centrality
     Deg_centrality=nx.degree_centrality(G_sub)
-    # Closeness
+    # Closeness centrality
     Clos_centrality=nx.closeness_centrality(G_sub)
-    # Betweenness
+    # Betweenness centrality
     Betw_centrality=nx.betweenness_centrality(G_sub)
     
     plt.figure()
     bins = numpy.linspace(0, 0.040, 40)
-    
+# Plot histogram
     plt.hist(list(Deg_centrality.values()), bins,normed=True, facecolor='gold', alpha=0.50)
     plt.hist(list(Clos_centrality.values()),bins, normed=True, facecolor='orchid', alpha=0.50)
     plt.hist(list(Betw_centrality.values()), bins, normed=True,  facecolor='turquoise', alpha=0.50)
@@ -81,7 +83,9 @@ def statistics_by_conf(G_sub, conf):
     
     
 def create_graph_by_auth(node,G_def):
+
     Hd=hd.Hop_Dist(G_def)
+# Divide all nodes in 4 groups by the hop distance level of the input node
     first_node=Hd.hop_distance(1, node)
     second_level_node=[i for i in Hd.hop_distance(2, node) if i not in Hd.hop_distance(1, node)]
     third_level_node=[i for i in Hd.hop_distance(3, node) if i not in Hd.hop_distance(2, node)]
@@ -97,7 +101,6 @@ def create_graph_by_auth(node,G_def):
         else:
             node_colours.append('dodgerblue')
                 
-    # Nodes that have more than 4 links
     node_2_conn=[node for node in G_def.nodes() if len(G_def[node]) <=2 ] 
     node_2_6_conn=[node for node in G_def.nodes() if len(G_def[node])>2 and len(G_def[node])<=6  ]
     node_6_10_conn=[node for node in G_def.nodes() if len(G_def[node])>6 and len(G_def[node])<=10 ]
@@ -115,7 +118,9 @@ def create_graph_by_auth(node,G_def):
             node_size.append(100)
         else:
             node_size.append(200)
-    
+            
+# Plot subgraph    
+    fig = plt.figure()
     nx.draw(G_def,pos=nx.spring_layout(G_def), 
             cmap=plt.get_cmap('jet'),
             node_color =node_colours,
@@ -123,12 +128,15 @@ def create_graph_by_auth(node,G_def):
             width=0.5,
             style='dotted',
             alpha=0.9)
+    fig.suptitle('Subgraph of level of hop distance from %s. ' %(node), fontsize=14, fontweight='bold', color='firebrick')
     red_patch = mpatches.Patch(color='red', label='d=1')
     lightcoral_patch = mpatches.Patch(color='lightcoral', label='d=2')
     orchid_patch = mpatches.Patch(color='orchid', label='d=3')
     dodgerblue_patch = mpatches.Patch(color='dodgerblue', label='d>3')
     
+
     plt.legend(handles=[red_patch, lightcoral_patch, orchid_patch, dodgerblue_patch], loc=1)
+
     plt.savefig('create_graph_by_auth.png')
 
     plt.show()
@@ -139,6 +147,7 @@ def create_graph_by_auth(node,G_def):
 def create_plot_shorter_path(G,tup_node):
     G_dij=G.subgraph(tup_node[1])
     weight=round(float(tup_node[0]),3)
+# Plot the shorter path
     fig = plt.figure()
     ax = fig.add_subplot(111)
     fig.subplots_adjust(top=0.85)

@@ -25,12 +25,13 @@ elif lst_contr[1]=='full':
         data = json.load(json_data)
 else:
     print('Try again!\n')
-    
-# Create a weighted graph
-print('Creating Graph...\n')
-G= Graph.create_graph(data)
-Graph.add_edges(data,G)
-print('The graph is made, it has %s nodes and %s edges.\n'%(G.number_of_nodes(),G.number_of_edges()))
+
+if lst_contr[2]=='1' or lst_contr[2]=='2' or lst_contr[2]=='3':  
+    # Create a weighted graph
+    print('Creating Graph...\n')
+    G= Graph.create_graph(data)
+    Graph.add_edges(data,G)
+    print('The graph is made, it has %s nodes and %s edges.\n'%(G.number_of_nodes(),G.number_of_edges()))
 
 if lst_contr[2]=='2' and lst_contr[3]=='a':
 # Set of all conferences of the dataset
@@ -83,7 +84,8 @@ if lst_contr[2]=='3' and lst_contr[3]=='a':
     while True:
         try:
             id_author_start=int(input('Insert authors id:\n'))
-            G[node]
+            G[id_author_start]
+            break
         except KeyError:
             print('The node is not in the graph\n')
         except:
