@@ -88,9 +88,9 @@ import html
 ```
 Functions definition:
 ```python
-def clean_name(name): #this function cleans the names 
-def jaccard_similarity(lst1,lst2): #this function is to calculate jaccard_similarity between two lists
-def Id_name(graph,node_auth): #this function is to convert the authors' ids into their corresponding names
+def clean_name(name): # This function cleans the names 
+def jaccard_similarity(lst1,lst2): # This function is to calculate jaccard_similarity between two lists
+def Id_name(graph,node_auth): # This function is to convert the authors' ids into their corresponding names
 ```
 * [*__`Hopdistance.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): 
 
