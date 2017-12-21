@@ -19,6 +19,19 @@ __Modules__:
 
 This file is the main corpus of the project, and it is to initialize and call another functions, which will explain in following.
 
+Modules and libraries which has to be imported:
+```python
+import json
+import Graph 
+import Hopdistance as hd
+import plot
+import Arisnumber as an
+import pandas as pd
+import sys
+import networkx as nx
+import warnings
+```
+
 * [*__`Graph.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Graph.py):
 
 By processing JSON file, it creates a graph, G, whose nodes are the authors and one edge between two nodes is a connection if they have at least one publication in common. Each edge is weighted in the following way:
@@ -29,6 +42,15 @@ By processing JSON file, it creates a graph, G, whose nodes are the authors and 
 </d1>
 
 > where a1, a2 are authors, p1 and p2 are the set of publication of the two authors and, J(p1 , p2) represents the jaccard similarity between these two sets of publications.
+
+
+Modules and libraries which has to be imported:
+```python
+import itertools
+import networkx as nx
+import GenericFunctions as gf
+```
+Functions definition:
 ```python
 def create_graph(inf_data): #this function is to create a graph's nodes without edges, (this function must be called with a #loaded json dataset file as a argument)
 def add_edges(inf_data,graph): #this function is used to create weighted graph's edges, (this must be called with a loaded json 
@@ -37,7 +59,15 @@ def add_edges(inf_data,graph): #this function is used to create weighted graph's
 
 * [*__`Arisnumber.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Arisnumber.py): 
 
-This file contains a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author. This class contains several functions:
+This file contains a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author.
+
+Modules and libraries which has to be imported:
+```python
+from collections import defaultdict
+import networkx as nx
+import heapq
+```
+Functions definition:
 ```python
 def __init__(self, graph): # for Initialization
 def create_dict_connection(self): # Function to make a dictionary that nodes appears as keys and tuples of connected nodes to 
@@ -49,7 +79,14 @@ def GroupNumber(self,set_id_author): # Dictionary with all shortest paths for th
 
 * [*__`GenericFunctions.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/GenericFunctions.py):
 
-This file contains just three generic functions which are used in previous and following modules and classes: 
+This file contains just three generic functions which are used in previous and following modules.
+
+Modules and libraries which has to be imported:
+```python
+import re
+import html
+```
+Functions definition:
 ```python
 def clean_name(name): #this function is to clean the names 
 def jaccard_similarity(lst1,lst2): #this function is to calculate jaccard_similarity between two lists
@@ -57,7 +94,7 @@ def Id_name(graph,node_auth): #this function is to convert the authors' ids into
 ```
 * [*__`Hopdistance.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Hopdistance.py): 
 
-This file contains a class named `Hop_Dist`, which finds all nodes that have hop distance at most equal to an integer d, starting from an input node, given both of them by the user. It also contains several functions:
+This file contains a class named `Hop_Dist`, which finds all nodes that have hop distance at most equal to an integer d, starting from an input node, given both of them by the user. It contains several functions:
 ```python
 def connect(self,lst_node,step): # Recursive function to calculate the hop distance, when the number of step is more than 1
 def hop_distance(self,step, node): # Function to calculate the hop distance of a specific input author for the 3 main situations
@@ -65,9 +102,9 @@ def hop_distance(self,step, node): # Function to calculate the hop distance of a
 
 * [*__`plot.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/plot.py): 
 
-this file contains several functions to plot results of the project using `matplotlib.pyplot` and `matplotlib.patches`.
+This file contains several functions to plot results of the project.
 
-this modules and libraries should be import:
+Modules and libraries which has to be imported:
 
 ```python
 import networkx as nx
@@ -77,6 +114,7 @@ import numpy
 import Hopdistance as hd
 import GenericFunctions as gf
 ```
+Functions definition:
 
 ```python
 def create_graph_by_conf(G_def, conf):
