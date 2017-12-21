@@ -73,7 +73,7 @@ def __init__(self, graph): # for Initialization
 def create_dict_connection(self): # Function to make a dictionary that nodes appears as keys and tuples of connected nodes 
 #as values in this form: ("connected node", "weight")
 def path_list(path,lst_path): # This function makes a list containing the path between pair of connected nodes.
-def dijkstrapath(self,start): # This function calculates the shortest distance between an author and the other nodes, by using a heap.
+def dijkstrapath(self,start): # This function calculates the shortest distance between an author and the other nodes, by using Dijkstra.
 def GroupNumber(self,set_id_author): # Dictionary with all shortest paths for the nodes of the input set.
 ```
 
