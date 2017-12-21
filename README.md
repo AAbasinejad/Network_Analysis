@@ -117,10 +117,17 @@ import GenericFunctions as gf
 Functions definition:
 
 ```python
-def create_graph_by_conf(G_def, conf): #
-def statistics_by_conf(G_sub, conf):
-def create_graph_by_auth(node,G_def):
-def create_plot_shorter_path(G,tup_node):
+def create_graph_by_conf(G_def, conf): # this function plot the subgraph of the nodes (authors) participating in the same
+#conference. The colors of the node rapresented the hope distance from a principal node, the size of the node is directly 
+#proportional at the number of the edges of each node.
+def statistics_by_conf(G_sub, conf): # this function create an histogram that rapresnt three different results about the 
+#nodes of the subgraph: betweenness centrality, degree centrality and closeness centality. The subgraph represented every 
+#nodes (author) that participate at that conference.
+def create_graph_by_auth(node,G_def): # this funcion create a plot that represented the principal node (input author) and 
+#the nodes that are connected with it until d_i level from the hop distance. the colors of the node represented the 
+#difference level of the hop distance and the size of the node rapresent the number of the edges of each nodes.
+def create_plot_shorter_path(G,tup_node): # this function create a plot that rapresent the shortest path between two nodes. 
+#Each node has a label that represent the name of the author, the cost of the shortest path in the subtitle.
 ```
 
 
