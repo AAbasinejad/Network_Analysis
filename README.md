@@ -13,24 +13,19 @@ In root directory run:
 * *__exercise_number__*: It can be *1* (just to make graph), *2* (just to run second part of the task) or *3* (just to run Third part of the task)
 * *__exercise_letter__*: It can be *a* or *b* (only if the second Argument is *2* and *3*, for each part of them)
 
+specific libraries which has to be installed:
+```python
+import pandas as pd
+import networkx as nx
+import numpy
+
+```
+
 __Modules__:
 
 * [*__`main.py`__* ](https://github.com/AAbasinejad/CS-Network/blob/master/main.py): 
 
 This module is the main corpus of the project, and initialises and calls other functions, listed later in this README file:
-
-Modules and libraries which has to be imported:
-```python
-import json
-import Graph 
-import Hopdistance as hd
-import plot
-import Arisnumber as an
-import pandas as pd
-import sys
-import networkx as nx
-import warnings
-```
 
 * [*__`Graph.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Graph.py):
 
@@ -43,13 +38,6 @@ By processing JSON file, it creates a graph, G, whose nodes are the authors and 
 
 > where a1, a2 are authors, p1 and p2 are the set of publication of the two authors and, J(p1 , p2) represents the jaccard similarity between these two sets of publications.
 
-
-Modules and libraries which has to be imported:
-```python
-import itertools
-import networkx as nx
-import GenericFunctions as gf
-```
 Functions definition:
 ```python
 def create_graph(inf_data): #this function creates a graph's nodes without edges, (this function must be called with a #loaded json dataset file as a argument)
@@ -61,12 +49,6 @@ def add_edges(inf_data,graph): #this function is used to create weighted graph's
 
 This module contains a class named `class Shortest_Path():` which is used to find the weight of the shortest path that connects the input author with [Aris](http://aris.me/) and the group number of each node of graph, using a given set of author.
 
-Modules and libraries which has to be imported:
-```python
-from collections import defaultdict
-import networkx as nx
-import heapq
-```
 Functions definition:
 ```python
 def __init__(self, graph): # for Initialization
@@ -81,11 +63,6 @@ def GroupNumber(self,set_id_author): # Dictionary with all shortest paths for th
 
 This file contains just three generic functions which are called in other modules.
 
-Modules and libraries which has to be imported:
-```python
-import re
-import html
-```
 Functions definition:
 ```python
 def clean_name(name): # This function cleans the names 
@@ -104,16 +81,6 @@ def hop_distance(self,step, node): # Function to calculate the hop distance of a
 
 This module contains several functions to plot results of the project.
 
-Modules and libraries which has to be imported:
-
-```python
-import networkx as nx
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-import numpy
-import Hopdistance as hd
-import GenericFunctions as gf
-```
 Functions definition:
 
 ```python
@@ -128,6 +95,3 @@ def create_graph_by_auth(node,G_def): # This funcion creates a plot showing the 
 def create_plot_shorter_path(G,tup_node): # This function creates a plot of the shortest path between any two nodes. 
 #Each node's label is the name of the author, whilst the cost of the shortest path is shown in the title.
 ```
-
-
-
