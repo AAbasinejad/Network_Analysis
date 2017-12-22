@@ -5,6 +5,7 @@ import numpy
 import Hopdistance as hd
 import GenericFunctions as gf
 
+# This function plots the subgraph of the nodes (authors) participating in the same conference.
 def create_graph_by_conf(G_def, conf):
     
 # Divide all nodes in 4 groups by the number of edges for each node
@@ -52,7 +53,7 @@ def create_graph_by_conf(G_def, conf):
     plt.close()
 
 
-
+# This function creates a histogram that rapresnt illustrating betweenness, degree and closeness centalities
 def statistics_by_conf(G_sub, conf):
     # Degree centrality
     Deg_centrality=nx.degree_centrality(G_sub)
@@ -81,7 +82,8 @@ def statistics_by_conf(G_sub, conf):
     plt.close()
 
     
-    
+# This funcion creates a plot showing the main node (i.e. the input author), and 
+# the adjacent nodes (with hop distance equal to the input d previously mentioned)
 def create_graph_by_auth(node,G_def):
 
     Hd=hd.Hop_Dist(G_def)
@@ -143,11 +145,11 @@ def create_graph_by_auth(node,G_def):
     plt.close()
 
 
-
+# This function creates a plot of the shortest path between any two nodes. 
 def create_plot_shorter_path(G,tup_node):
     G_dij=G.subgraph(tup_node[1])
     weight=round(float(tup_node[0]),3)
-# Plot the shorter path
+# Plot the shortest path
     fig = plt.figure()
     ax = fig.add_subplot(111)
     fig.subplots_adjust(top=0.85)

@@ -27,7 +27,7 @@ else:
     print('Try again!\n')
 
 if lst_contr[2]=='1' or lst_contr[2]=='2' or lst_contr[2]=='3':  
-    # Create a weighted graph
+# Create a weighted graph
     print('Creating Graph...\n')
     G= Graph.create_graph(data)
     Graph.add_edges(data,G)
@@ -46,6 +46,7 @@ if lst_contr[2]=='2' and lst_contr[3]=='a':
             print('No conference in dataset\n')
         except:
             print('Invalid Value\n')            
+    print('Running...')
 # Subgraph of authors who have published at a specific conference
     conf_sub=list({node for node in G.nodes() if conf in G.node[node]['id_conference_int']})
     G_sub=G.subgraph(conf_sub)
@@ -71,6 +72,8 @@ elif lst_contr[2]=='2' and lst_contr[3]=='b':
                 print('The node is not in the graph\n')
         except:
             print('Invalid Value\n')
+    
+    print('Running...')
 # Subgraph of authors who have hop distance at most equal to d
     hp_dist=hd.Hop_Dist(G)
     G_hop=G.subgraph(hp_dist.hop_distance(d,node))
@@ -90,7 +93,9 @@ if lst_contr[2]=='3' and lst_contr[3]=='a':
             print('The node is not in the graph\n')
         except:
             print('Invalid Value\n')
-# Find the wheight and the path of the shortest path that connect
+    
+    print('Running...')
+# Find the weight and the shortest path that connects
 # a specific author with Aris
     path=an.Shortest_Path(G)
 # Plot the shortest distance
@@ -111,7 +116,9 @@ elif lst_contr[2]=='3' and lst_contr[3]=='b':
             print('The node is not in the graph\n')
         except:
             print('Invalid Value\n')
-# Create a DataFrame with all the group number for each nodes of the graph
+    
+    print('Running...')
+# Create a DataFrame with all the GroupNumber for each nodes of the graph
     path=an.Shortest_Path(G)  
     tab_groupnumber=pd.DataFrame.from_dict(path.GroupNumber(set_id),orient='index')
     tab_groupnumber.columns=['Weight','Shortest Path']

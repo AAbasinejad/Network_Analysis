@@ -2,7 +2,7 @@ import itertools
 import networkx as nx
 import GenericFunctions as gf
 
-# Function to create a graph's nodes without edges
+# This function creates a graph's nodes without edges
 def create_graph(inf_data):   
     graph=nx.Graph()
     dict_aut={} 
@@ -24,11 +24,11 @@ def create_graph(inf_data):
                           id_conference_int=list(dict_aut[auth["author_id"]]['id_conference_int']))
     return graph
 
-# Function to create weighted graph's edges
+# This function creates weighted graph's edges
 def add_edges(inf_data,graph):
     list_id_name=[[id_name['author_id'] for id_name in elem['authors']] for elem in inf_data if len(elem['authors'])>1]
     # This 'for' loop creates the edges of the graph, taking them from a set of tuples, where there are all possible 
-    # combination between nodes which are linked
+    # combinations between nodes which are connected
     for edge in {subset for elem in list_id_name for subset in itertools.combinations(elem,2)}:
         graph.add_edge(edge[0],edge[1],weight=1-gf.jaccard_similarity(graph.node[edge[0]]['id_publication_int'],graph.node[edge[1]]['id_publication_int']))
 
