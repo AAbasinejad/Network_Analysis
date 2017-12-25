@@ -13,7 +13,7 @@ In root directory run:
 * *__exercise_number__*: It can be *1* (just to make graph), *2* (just to run second part of the task) or *3* (just to run Third part of the task)
 * *__exercise_letter__*: It can be *a* or *b* (only if the second Argument is *2* and *3*, for each part of them)
 
-specific libraries which has to be installed:
+specific libraries which have to be installed:
 ```python
 import pandas as pd
 import networkx as nx
