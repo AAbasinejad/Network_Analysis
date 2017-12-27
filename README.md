@@ -25,7 +25,7 @@ __Modules__:
 
 * [*__`main.py`__* ](https://github.com/AAbasinejad/CS-Network/blob/master/main.py): 
 
-This module is the main corpus of the project, and initialises and calls other functions, listed later in this README file:
+This module is the main corpus of the project, and initialises and calls other functions, listed later in this README file.
 
 * [*__`Graph.py`__*](https://github.com/AAbasinejad/CS-Network/blob/master/Graph.py):
 
