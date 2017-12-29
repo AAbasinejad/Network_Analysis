@@ -1,4 +1,4 @@
-# CS-Network
+# Network Analysis 
 Repository for Homework __4__ of Algorithmic Methods for Data Mining Course - *__Group 1__*.
 
 __Introduction__: Carry out an analysis of a Network of Computer Scientists by applying the [Graph methods](https://networkx.github.io/) in python.
