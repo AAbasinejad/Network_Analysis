@@ -1,6 +1,4 @@
 # Network Analysis 
-Repository for Homework __4__ of Algorithmic Methods for Data Mining Course - *__Group 1__*.
-
 __Introduction__: Carry out an analysis of a Network of Computer Scientists by applying the [Graph methods](https://networkx.github.io/) in python.
 
 __Data__: In this project we have used the [DBLP](http://dblp.uni-trier.de/) dataset which contains information about Computer Scientists articles, and we worked on two json file: [*__full_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/full_dblp.json.zip ) json file, which needs to be parsed and contains the entire network, and  [*__reduced_dblp__*](http://www.diag.uniroma1.it/~fazzone/Teaching/AMD_2017/reduced_dblp.json.zip) json file for testing and debugging, which needs to be parsed and contains a portion of the network, also `Python 3.x` was used in this project.
